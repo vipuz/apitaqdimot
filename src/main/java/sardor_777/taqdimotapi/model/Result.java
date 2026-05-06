@@ -1,4 +1,4 @@
-package model;
+package sardor_777.taqdimotapi.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

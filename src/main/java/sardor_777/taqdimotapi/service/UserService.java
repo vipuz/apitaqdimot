@@ -1,11 +1,11 @@
-package service;
+package sardor_777.taqdimotapi.service;
 
-import dto.UserDto;
-import model.Result;
-import model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repo.UserRepo;
+import sardor_777.taqdimotapi.dto.UserDto;
+import sardor_777.taqdimotapi.model.Result;
+import sardor_777.taqdimotapi.model.User;
+import sardor_777.taqdimotapi.repo.UserRepo;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,12 +16,12 @@ public class UserService {
     UserRepo userRepo;
 
     // read
-    public List<User> getall(){
+    public List<User> getall() {
         return userRepo.findAll();
     }
 
     // read by id
-    public User byid(Long id){
+    public User byid(Long id) {
         return userRepo.findById(id).get();
     }
 
@@ -35,11 +35,11 @@ public class UserService {
         user.setRole(userDto.getRole());
 
         userRepo.save(user);
-        return new Result("Saqlandi",true);
+        return new Result("Saqlandi", true);
     }
 
     // update
-    public Result update(Long id , UserDto userDto) {
+    public Result update(Long id, UserDto userDto) {
         Optional<User> userOptional = userRepo.findById(id);
 
         if (userOptional.isPresent()) {
@@ -52,7 +52,7 @@ public class UserService {
 
             userRepo.save(user);
 
-            return new Result("0'zgartirildi",true);
+            return new Result("0'zgartirildi", true);
         }
         return new Result("Id topilmadi", true);
     }

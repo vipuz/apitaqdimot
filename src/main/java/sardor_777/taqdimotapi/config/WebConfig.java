@@ -1,4 +1,4 @@
-package config;
+package sardor_777.taqdimotapi.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;

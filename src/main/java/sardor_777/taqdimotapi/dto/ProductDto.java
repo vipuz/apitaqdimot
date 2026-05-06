@@ -1,4 +1,4 @@
-package dto;
+package sardor_777.taqdimotapi.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
